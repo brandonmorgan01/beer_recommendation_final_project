@@ -3,7 +3,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import pandas as pd
 import os
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction import text
 from sklearn.cluster import KMeans
