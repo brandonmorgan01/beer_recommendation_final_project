@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Components</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Beer Goggles</title>
+
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css" media="screen">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="/static/styles.css" media="screen">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+    <script src="..\static\app.js"></script> 
+
+</head>
+
+
+<body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid navbar-custom">
+  
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="row">
+            <div class="navbar-header">
+                
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="col-xs-9 phone-nav">
+                <a class="navbar-brand" href="{{ url_for('main') }}" id="logo">Beer Goggles</a>
+              </div>
+            </div>
+             
+              <ul class="nav navbar-nav navbar-right navbar-right-custom">
+                </li>
+                <li><a href="{{ url_for('beer') }}">Beer Index</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>   
+                <li><a href="{{ url_for('main') }}">Home</a></li>
+                
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+      <!-- End of navbar -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+    <script src="..\static\app.js"></script> 
+
+           <!-- <script type="text/javascript" {{ url_for('static', filename='app.js')}}></script> -->
+
+
+</head>
+
+
+<body>
+    <div class="container">
+        <section class="row">
+          <div class="col-md-12">
+            <article class="description-content">
+                <h1 class="description-header">Here Are Six New Beers To Try</h1>
+                <hr class="description-hr"/>
+          <div class="container">
+          <div class="col-md-11">
+            <ul class="summary"></ul>
+          <div class="col-md-12">
+      
+  <form action='/result' method='post'>
+       
+    </form>
+            <div class="col-md-12">
+              <table class="table table-striped">
+                <thead>
+                    <th>Beer</th>
+                </thead>
+                <tbody> 
+                    <tr>
+                        {%for i in mydata%} 
+                      <td>{{i}}</td>  
+                    {%endfor%}
+                  </tr>
+
+                    <th>Description</th>
+                  <tr>
+                    {%for j in mydata2%}
+                    <td>{{j}}</td> 
+                    {%endfor%}
+                  </tr>
+                  
+                    <th>ABV</th>
+                  <tr>
+                    {%for j in mydata3%}
+                    <td>{{j}}</td> 
+                    {%endfor%}
+                  </tr>
+                </tbody>  
+              </table>  
+          </div>
+        </div>
+      </div>
+      </div>
+      </article>
+      </div>
+      </section>
+    
+<!--           
+            <div id="svg-area"></div>
+            <div id="svg-area2"></div>
+            <div id="svg-area3"></div> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+            <!-- <script src="{{ url_for('static', filename='app.js') }}"></script> 
+            <script src="static/app.js"></script>  -->
+            <!-- <footer class="footer navbar-fixed-bottom">
+                <div class="two-toned-footer-color"></div>
+                <p class="text-muted text-muted-footer text-center">
+                   &copy; Copyright Coding Bootcamp 2019
+                </p>
+              </footer> -->
+            </div>
+</body>
+<!-- <footer class="footer navbar-fixed-bottom">
+    <div class="two-toned-footer-color"></div>
+    <p class="text-muted text-muted-footer text-center">
+       &copy; Copyright Coding Bootcamp 2019
+    </p>
+  </footer> -->
+
+
+</html>            
